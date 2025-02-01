@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MLK</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        :root {
+             --navy-blue: #0A3161;
+             --flag-red: #BF0A30;
+             --pure-white: #FFFFFF;
+             --light-blue: #3C6997;
+             --dark-red: #8C1C13;
+             --silver-gray: #D3D3D3;
+             --yelow-white: #fff6e5;
+         }
+
+        body {
+            background-color: #fff6e5;
+            overflow-x: hidden;
+        }
+        .header {
+            position: sticky;
+            width: 100vw;
+            height: 12vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: rgb(92, 92, 92);
+        }
+        .header-left {
+            position: relative;
+            width: 30vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .header-text {
+            position: relative;
+            width: 30vw;
+            display: flex;
+            color: white;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            font-family: "Arial Black", sans-serif;
+        }
+        .logo img {
+            position: relative;
+            aspect-ratio: 1/1;
+            max-width: 4vw;
+            height: auto;
+            margin-left: 3vw ;
+        }
+        .header-right {
+            position: relative;
+            width: 70vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .menu {
+            width: 40vw;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+            text-decoration: none;
+            padding-right: 10vw;
+            font-family: "Arial Black", sans-serif;
+        }
+        .menu-item {
+            position: relative;
+            margin: 0vh 1.5vw;
+        }
+        .menu-item a {
+            text-decoration: none !important; /* Повністю прибираємо підкреслення */
+            color: white; /* Стандартний колір тексту */
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .menu-item a:hover {
+            color: #4580fb !important; /* При наведенні змінюємо колір */
+            text-decoration: none !important; /* Гарантовано прибираємо підкреслення */
+        }
+
+        .menu-item a:focus,
+        .menu-item a:active {
+            outline: none !important; /* Прибираємо обводку при фокусуванні */
+            text-decoration: none !important; /* Додатково прибираємо підкреслення */
+        }
+        .header-icons {
+            width: 30vw;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+        }
+        .menu-icon {
+            position: relative;
+            margin: 0 0.5vw;
+        }
+        .main {
+            position: relative;
+            background-color: var(--yelow-white);
+            width: 100vw;
+            height: 76vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            top: -0.2em;
+        }
+        .main-left {
+            position: relative;
+            background-color: var(--navy-blue);
+            width: 60vw;
+            height: 99%;
+            border-radius: 0 2em 2em 0;
+            border: 2px solid rgb(0, 0, 0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+        }
+        .main-text-container {
+            position: relative;
+            width: 30vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .main-text {
+            position: relative;
+            color: white;
+            font-family: "Arial Black", sans-serif;
+            font-size: 4rem;
+            letter-spacing: 0.1rem;
+            font-weight: bold;
+            top: -6vh;
+            text-shadow: 2px 2px 2px black;
+        }
+
+        .red {
+            color: var(--dark-red);
+        }
+        .main-text-sub {
+            position: relative;
+            color: white;
+            font-family: "Arial Black", sans-serif;
+            font-size: 2rem;
+            top: -6vh;
+            text-shadow: 2px 2px 2px black;
+        }
+        .main-countdown {
+            position: relative;
+            width: 51vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            bottom: -10vh;
+        }
+        .countdown-cons {
+            position: relative;
+            width: 11vw;
+            height: 14vh;
+            margin: 2vw;
+            background-color: rgb(44, 44, 44);
+            display: flex;
+            border-radius: 1.6em;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-shadow: 2px 2px 2px black;
+            box-shadow: 2px 2px 2px black;
+        }
+        .countdown-cons p {
+            color: white;
+            font-family: "Playfair Display", sans-serif;
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 2px black;
+
+        }
+        .countdown-text {
+            color: white;
+            font-family: "Arial Black", sans-serif;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        .main-right{
+            position: relative;
+            background-color: var(--flag-red);
+            display: flex;
+            max-width: 39.5vw;
+            height: 99%;
+            border-radius: 2em 0 0 2em;
+            border: 2px solid rgb(0, 0, 0);
+            align-items: center;
+            justify-content: center;
+        }
+        .main-photo img {
+            position: relative;
+            max-width: 80%;
+            height: auto;
+
+        }
+        .SC {
+            position: relative;
+            background-color: rgb(239, 239, 239);
+            width: 100%;
+            height: 24vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+        }
+        .SC-text-container {
+            position: relative;
+            color: #000000;
+            font-family: "Bona nova sc", sans-serif;
+            font-size: 3rem;
+            font-weight: bold;
+
+        }
+        .SC-content {
+             position: relative;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+         }
+        .SC-container {
+            position: relative;
+            background-color: rgb(92, 92, 92);
+            width:  auto;
+            margin: 2vw;
+            padding: 2vh 2vw;
+            max-height: 6vh;
+            border-radius: 1.6em;
+            border: 3px solid rgb(0, 0, 0);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .SC-container p {
+            color: white;
+            font-family: "Arial Black", sans-serif;
+            font-size: 1.2rem;
+            text-shadow: 2px 2px 2px black;
+        }
+
+        .SC-button {
+            background: var(--light-blue);
+            font-family: inherit;
+            padding: 0.6em 1.3em;
+            font-weight: 900;
+            font-size: 18px;
+            border: 3px solid black;
+            border-radius: 0.4em;
+            box-shadow: 0.1em 0.1em;
+            cursor: pointer;
+        }
+
+        .SC-button:hover {
+            transform: translate(-0.05em, -0.05em);
+            box-shadow: 0.15em 0.15em;
+        }
+
+        .SC-button:active {
+            transform: translate(0.05em, 0.05em);
+            box-shadow: 0.05em 0.05em;
+        }
+        @media (max-width: 768px) {
+            .main {
+                flex-direction: column !important;
+                height: auto !important;
+                justify-content: center !important;
+            }
+
+            .main-left,
+            .main-right {
+                width: 100% !important;
+                height: auto !important;
+                border-radius: 0 !important;
+            }
+
+            .main-text {
+                font-size: 3rem !important;
+            }
+
+            .main-text-sub {
+                font-size: 1.5rem !important;
+            }
+
+            .main-countdown {
+                width: 90% !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 10px !important;
+            }
+
+            .countdown-cons {
+                width: 80% !important;
+                height: 12vh !important;
+                margin: 10px 0 !important;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-left">
+            <div class="logo">
+                <img src="/static/logo1.png" alt="">
+            </div>
+            <div class="header-text">
+                <p>MLK Files</p>
+            </div>
+        </div>
+        <div class="header-right">
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a href="#Token">Token address</a>
+                    </li>
+                    <li class="menu-item ">
+                        <a href="#How-to-buy">How to buy</a>
+                    </li>
+                    <li class="menu-item ">
+                        <a href="#about-us">About us</a>
+                    </li>
+                </ul>
+            <div class="header-icons">
+                <li class="menu-icon" >
+                    <a href="https://x.com/gme_buck">
+                        <img src="/static/x.svg" alt="">
+                    </a>
+                </li>
+                <li class="menu-icon" >
+                    <a href="https://t.me/GMEMASCOTPORTAL">
+                        <img src="/static/bxl_telegram.svg" alt="">
+                    </a>
+                </li>
+                <li class="menu-icon" >
+                    <a href="https://tr.ee/bTOsE4DkEE">
+                        <img src="/static/dextools.png" alt="">
+                    </a>
+                </li>
+                <li class="menu-icon" >
+                    <a href="https://tr.ee/nFppgsToj-">
+                        <img src="/static/dexscreener.png" alt="">
+                    </a>
+                </li>
+                <li class="menu-icon" >
+                    <a href="https://tr.ee/Al1M1V89O2">
+                        <img src="/static/cmc.png" alt="">
+                    </a>
+                </li>
+            </div>
+        </div>
+    </div>
+<section class="main">
+    <div class="main-left">
+        <div class="main-text-container">
+            <p class="main-text"><span class="red">MLK</span> Files</p>
+            <p class="main-text-sub">Movement</p>
+        </div>
+        <div class="main-countdown">
+            <div class="countdown-cons">
+                <p>00</p>
+                <p class="countdown-text">Days</p>
+            </div>
+            <div class="countdown-cons">
+                <p>00</p>
+                <p class="countdown-text">Hours</p>
+            </div>
+            <div class="countdown-cons">
+                <p>00</p>
+                <p class="countdown-text">Minutes</p>
+            </div>
+            <div class="countdown-cons">
+                <p>00</p>
+                <p class="countdown-text">Seconds</p>
+            </div>
+        </div>
+    </div>
+    <div class="main-right">
+        <div class="main-photo">
+            <img src="/static/chillbuck1.png" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="SC">
+    <div class="SC-text-container">
+        <p>Solana Token Address:</p>
+    </div>
+    <div class="SC-content">
+        <div class="SC-container">
+            <p class="SC-contract">21h324h3241412341l2340123409</p>
+        </div>
+        <div class="SC-button-con">
+            <button class="SC-button">Copy</button>
+        </div>
+    </div>
+</section>
+
+<section class='main'>
+
+</section>
+<script src="/js/index.js"></script>
+</body>
+</html>
